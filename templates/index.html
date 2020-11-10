@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+    <h1>대문 페이지</h1>
+    이름 : {{user}}<br>
+    레벨 : {{data.level}}<br>
+    포인트 : {{data.point}}<br>
+    경험지 : {{data.exp}}<br>
+
+    <form action="/" method="post">
+        다음 이름 : <input type="text" name="user">
+        <input type="submit" value="post 전송">
+    </form>
+
+    <form action="/" method="get">
+        다음 이름 : <input type="text" name="user">
+        <input type="submit" value="get 전송">
+    </form>
+</body>
+</html>
